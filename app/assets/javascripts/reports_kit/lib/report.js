@@ -70,16 +70,46 @@ ReportsKit.Report = (function() {
       cancelClass: 'btn-default',
       maxDate: moment(),
       locale: {
-        format: 'DD/MM/YYYY'
+        "direction": "ltr",
+        "format": "DD/MM/YYYY",
+        "separator": " - ",
+        "applyLabel": "Applica",
+        "cancelLabel": "Annulla",
+        "fromLabel": "Da",
+        "toLabel": "A",
+        "customRangeLabel": "Personalizzata",
+        "daysOfWeek": [
+            "Do",
+            "Lu",
+            "Ma",
+            "Me",
+            "Gi",
+            "Ve",
+            "Sa"
+        ],
+        "monthNames": [
+            "Gennaio",
+            "Febbraio",
+            "Marzo",
+            "April",
+            "Maggio",
+            "Giugno",
+            "Luglio",
+            "Agosto",
+            "Settembre",
+            "Ottobre",
+            "Novembre",
+            "Dicembre"
+        ],
+        "firstDay": 1
       },
       ranges: {
-        'Last 30 Days': [moment().subtract(30, 'days'), moment()],
-        'Last 2 Months': [moment().subtract(2, 'months'), moment()],
-        'Last 3 Months': [moment().subtract(3, 'months'), moment()],
-        'Last 4 Months': [moment().subtract(4, 'months'), moment()],
-        'Last 6 Months': [moment().subtract(6, 'months'), moment()],
-        'Last 12 Months': [moment().subtract(12, 'months'), moment()],
-        'Year To Date': [moment().startOf('year'), moment()]
+        'Ultimi 30 Giorni': [moment().subtract(30, 'days'), moment()],
+        'Ultimi 3 Mesi': [moment().subtract(3, 'months'), moment()],
+        'Ultimi 6 Mesi': [moment().subtract(6, 'months'), moment()],
+        'Ultimi 12 Mesi': [moment().subtract(12, 'months'), moment()],
+        'Ultimi 24 Mesi': [moment().subtract(24, 'months'), moment()],
+        'Da inizio anno': [moment().startOf('year'), moment()]
       }
     });
   };
