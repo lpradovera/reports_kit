@@ -70,7 +70,7 @@ ReportsKit.Report = (function() {
       cancelClass: 'btn-default',
       maxDate: moment(),
       locale: {
-        format: 'MMM D, YYYY'
+        format: 'DD/MM/YYYY'
       },
       ranges: {
         'Last 30 Days': [moment().subtract(30, 'days'), moment()],
